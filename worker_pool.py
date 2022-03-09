@@ -29,10 +29,6 @@ class ThreadPool:
             thread = self.pool.dequeue()
             thread.join()
 
-
-
-
-
     def put(self, item):
         if not isinstance(item, Task):
             raise TaskTypeErrorException()
@@ -46,7 +42,6 @@ class TaskTypeErrorException(Exception):
 def process():
     time.sleep(1)
     print('This is a SimpleTask callable function 1.')
-
 
 
 if __name__ == '__main__':
